@@ -1,0 +1,17 @@
+{
+    "base_url": "https://api.worldbank.org/v2",
+    "per_page": 500,
+    "retries": 3,
+    "timeout": 10,
+    "pause": 2,
+    "countries": [
+        "CHN",
+        "RUS"
+    ],
+    "indicators": [
+        "NY.GDP.PCAP.CD"
+    ],
+    "date_interval": [
+        "2020:2024"
+    ]
+}
