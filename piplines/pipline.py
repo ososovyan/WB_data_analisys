@@ -17,5 +17,8 @@ def run_pipline():
     data = extract_data(cfg)
     df = transform(data)
     conn = get_bd_connection(cfg)
+
     load_data(conn, "main_table", df)
     logger.info("ETL пайплайн завершен")
+    print(df)
+    conn.close()

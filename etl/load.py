@@ -76,6 +76,7 @@ def create_table(conn, table_name, df, schema = 'public'):
             primary_keys.append(col)
 
         for ref_table, ref_pk in existing_tables.items():
+
             if col.lower() == f"{ref_table.lower()}_id":
                 foreign_keys.append(
                     sql.SQL("FOREIGN KEY ({col}) REFERENCES {ref_table}({ref_pk})").format(

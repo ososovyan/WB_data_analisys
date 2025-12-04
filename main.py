@@ -4,6 +4,6 @@ from piplines.pipline import run_pipline
 from piplines.create_ref_tables import create_ref_tables_con, create_ref_tables_ind
 
 if __name__ == "__main__":
-    #run_pipline()
+    run_pipline()
     #create_ref_tables_con()
-    create_ref_tables_ind()
+    #create_ref_tables_ind()

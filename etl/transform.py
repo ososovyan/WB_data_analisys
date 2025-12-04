@@ -42,7 +42,12 @@ def normalize_reference_from_key(df: pd.DataFrame, key: str = None) -> pd.DataFr
     if key in special_keys:
         cols = process_columns_for_special_keys(df.columns.tolist(), key)
     elif key is None:
-        cols = ["country.id", "indicator.id", "data", "value"]
+        #Хардкод того что при в запросе country_id не iso3 a iso2
+        df.rename(columns={
+            "countryiso3code": "country.id",
+            "country.id": "country.iso2_code"
+        }, inplace=True)
+        cols = ["country.id", "indicator.id", "date", "value", "obs_status", "unit"]
     else:
         cols = [col for col in df.columns if col.startswith(f"{key}.")]
     if not cols:
