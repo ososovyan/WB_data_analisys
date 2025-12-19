@@ -1,0 +1,11 @@
+{
+    "base_url": "https://api.worldbank.org/v2",
+    "per_page": 2000,
+    "retries": 3,
+    "timeout": 10,
+    "pause": 2,
+    "countries": [],
+    "indicators": [ "all" ],
+    "date_interval": [
+    ]
+}
